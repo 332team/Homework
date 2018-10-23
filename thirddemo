@@ -20,7 +20,7 @@ int main()
 	const char* srcPath2 = "space.jpg";
 	const char* dstPath = "supermaninspace.tif";//输出图像
 
-									   //图像内存存储
+	//图像内存存储
 	GByte* buffTmpr1;
 	GByte* buffTmpr2;
 	GByte* buffTmpg1;
@@ -34,7 +34,7 @@ int main()
 	poSrcDS1 = (GDALDataset*)GDALOpenShared(srcPath1, GA_ReadOnly);//打开图像superman.jpg
 	poSrcDS2 = (GDALDataset*)GDALOpenShared(srcPath2, GA_ReadOnly);//打开图像space.jpg
 
-																   //获取图像宽度，高度，波段数
+        //获取图像宽度，高度，波段数
 	imgXlen = poSrcDS1->GetRasterXSize();
 	imgYlen = poSrcDS1->GetRasterYSize();
 	bandNum = poSrcDS1->GetRasterCount();
